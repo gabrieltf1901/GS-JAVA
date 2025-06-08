@@ -1,12 +1,9 @@
-// UserDto.java
 package com.gestaoabrigos.dto;
 
 import jakarta.validation.constraints.*;
 import java.util.Set;
 
-/**
- * DTO para transferência de dados de User.
- */
+
 public class UserDto {
 
     private Long id;
@@ -23,7 +20,6 @@ public class UserDto {
     public UserDto() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

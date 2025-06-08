@@ -1,4 +1,3 @@
-// OAuth2Config.java
 package com.gestaoabrigos.config;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -9,9 +8,7 @@ import org.springframework.security.oauth2.client.registration.ClientRegistratio
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 
-/**
- * Configuração de clientes OAuth2.
- */
+
 @Configuration
 public class OAuth2Config {
 

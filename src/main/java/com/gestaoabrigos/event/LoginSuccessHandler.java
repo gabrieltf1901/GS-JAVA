@@ -1,4 +1,3 @@
-// src/main/java/com/gestaoabrigos/event/LoginSuccessHandler.java
 package com.gestaoabrigos.event;
 
 import com.gestaoabrigos.model.User;
@@ -16,6 +15,5 @@ public class LoginSuccessHandler {
     public void onLoginSuccess(LoginSuccessEvent event) {
         User user = event.user();
         logger.info("Login bem-sucedido para: " + user.getUsername());
-        // ... outras ações ...
     }
 }

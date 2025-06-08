@@ -1,4 +1,3 @@
-// RabbitConfig.java
 package com.gestaoabrigos.config;
 
 import org.springframework.amqp.core.Binding;
@@ -8,9 +7,7 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Configuração de RabbitMQ: filas, exchange e bindings.
- */
+
 @Configuration
 public class RabbitConfig {
 

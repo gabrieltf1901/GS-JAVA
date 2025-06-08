@@ -1,12 +1,8 @@
-// RecursoDto.java
 package com.gestaoabrigos.dto;
 
-import com.gestaoabrigos.model.CategoriaRecurso;
 import jakarta.validation.constraints.*;
 
-/**
- * DTO para transferência de dados de Recurso.
- */
+
 public class RecursoDto {
 
     private Long id;

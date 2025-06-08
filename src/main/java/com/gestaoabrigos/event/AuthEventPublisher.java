@@ -1,4 +1,3 @@
-// src/main/java/com/gestaoabrigos/event/AuthEventPublisher.java
 package com.gestaoabrigos.event;
 
 import com.gestaoabrigos.model.User;

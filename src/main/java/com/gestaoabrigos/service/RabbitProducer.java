@@ -1,13 +1,10 @@
-// RabbitProducer.java
 package com.gestaoabrigos.service;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Serviço produtor de mensagens para RabbitMQ.
- */
+
 @Service
 public class RabbitProducer {
 

@@ -1,4 +1,3 @@
-// src/main/java/com/gestaoabrigos/config/MvcConfig.java
 package com.gestaoabrigos.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -10,9 +9,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        // GET /login → login.html
         registry.addViewController("/login").setViewName("login");
-        // opcional: GET / → index.html
         registry.addViewController("/").setViewName("index");
     }
 }

@@ -1,4 +1,3 @@
-// RecursoServiceImpl.java
 package com.gestaoabrigos.service;
 
 import com.gestaoabrigos.dto.RecursoDto;
@@ -55,7 +54,6 @@ public class RecursoServiceImpl implements RecursoService {
         recursoRepository.deleteById(id);
     }
 
-    // Métodos auxiliares de conversão
     private RecursoDto toDto(Recurso entity) {
         RecursoDto dto = new RecursoDto();
         dto.setId(entity.getId());

@@ -1,4 +1,3 @@
-// AbrigoServiceImpl.java
 package com.gestaoabrigos.service;
 
 import com.gestaoabrigos.dto.AbrigoDto;
@@ -57,7 +56,6 @@ public class AbrigoServiceImpl implements AbrigoService {
         abrigoRepository.deleteById(id);
     }
 
-    // Métodos auxiliares de conversão
     private AbrigoDto toDto(Abrigo entity) {
         AbrigoDto dto = new AbrigoDto();
         dto.setId(entity.getId());

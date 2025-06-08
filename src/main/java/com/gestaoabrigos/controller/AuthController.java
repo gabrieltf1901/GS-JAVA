@@ -17,9 +17,8 @@ public class AuthController {
     public AuthController(AuthService authService) {
         this.authService = authService;
     }
-    
 
-    // Exibe o formulário de registro
+
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
@@ -37,10 +36,8 @@ public class AuthController {
             return "register";
         }
 
-        // Chama o serviço para criar o usuário
         authService.register(user);
 
-        // Mensagem flash para exibir sucesso
         redirectAttrs.addFlashAttribute("success", "Cadastro realizado com sucesso! Faça login abaixo.");
         return "redirect:/login";
     }

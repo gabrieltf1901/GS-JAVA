@@ -1,38 +1,34 @@
-// User.java
 package com.gestaoabrigos.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.util.Set;
 
-/**
- * Entidade que representa um usuário da aplicação.
- */
+
 @Entity
 @Table(name = "USERS")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Identificador único do usuário
+    private Long id;
 
     @Column(nullable = false, unique = true, length = 50)
     @NotBlank
-    private String username; // Nome de usuário para login
+    private String username;
 
     @Column(nullable = false)
     @NotBlank
-    private String password; // Senha criptografada
+    private String password;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "USER_ROLES", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role")
-    private Set<String> roles; // Papéis (roles) do usuário
+    private Set<String> roles;
 
     public User() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

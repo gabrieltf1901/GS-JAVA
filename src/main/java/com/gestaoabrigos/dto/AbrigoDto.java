@@ -1,12 +1,9 @@
-// AbrigoDto.java
 package com.gestaoabrigos.dto;
 
 import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 
-/**
- * DTO para transferência de dados de Abrigo.
- */
+
 public class AbrigoDto {
 
     private Long id;
@@ -36,7 +33,6 @@ public class AbrigoDto {
     public AbrigoDto() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

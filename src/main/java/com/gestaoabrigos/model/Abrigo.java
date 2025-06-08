@@ -1,4 +1,3 @@
-// Abrigo.java
 package com.gestaoabrigos.model;
 
 import jakarta.persistence.*;
@@ -6,50 +5,46 @@ import jakarta.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-/**
- * Entidade que representa um abrigo para atendimento emergencial.
- */
+
 @Entity
 @Table(name = "ABRIGO")
 public class Abrigo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // Identificador único do abrigo
+    private Long id;
 
     @Column(nullable = false, length = 100)
     @NotBlank
-    private String nome; // Nome do abrigo
+    private String nome;
 
     @Column(nullable = false, length = 200)
     @NotBlank
-    private String endereco; // Endereço completo do abrigo
+    private String endereco;
 
     @Column(nullable = false, precision = 10, scale = 7)
     @NotNull
-    private BigDecimal latitude; // Latitude geográfica
+    private BigDecimal latitude;
 
     @Column(nullable = false, precision = 10, scale = 7)
     @NotNull
-    private BigDecimal longitude; // Longitude geográfica
+    private BigDecimal longitude;
 
     @Column(name = "capacidade_total", nullable = false)
     @NotNull
     @Min(1)
-    private Integer capacidadeTotal; // Capacidade máxima de pessoas
-
+    private Integer capacidadeTotal;
     @Column(nullable = false, length = 10)
     @NotBlank
     @Pattern(regexp = "ABERTO|FECHADO")
-    private String status; // Status atual: ABERTO ou FECHADO
+    private String status;
 
     @Column(name = "data_cadastro", nullable = false)
-    private LocalDateTime dataCadastro = LocalDateTime.now(); // Data de criação do registro
+    private LocalDateTime dataCadastro = LocalDateTime.now();
 
     public Abrigo() {
     }
 
-    // Getters e Setters
     public Long getId() {
         return id;
     }

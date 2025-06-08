@@ -1,4 +1,3 @@
-// RecursoController.java
 package com.gestaoabrigos.controller;
 
 import com.gestaoabrigos.dto.RecursoDto;
@@ -11,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Controller para CRUD de recursos.
- */
+
 @Controller
 @RequestMapping("/recursos")
 public class RecursoController {

@@ -14,7 +14,6 @@
             <label for="endereco" class="form-label">Endereço</label>
             <input type="text" id="endereco" th:field="*{endereco}" class="form-control" required/>
         </div>
-        <!-- outros campos... -->
         <button type="submit" class="btn btn-primary w-100"
                 th:text="${abrigo.id} != null ? 'Atualizar' : 'Cadastrar'">
             Cadastrar

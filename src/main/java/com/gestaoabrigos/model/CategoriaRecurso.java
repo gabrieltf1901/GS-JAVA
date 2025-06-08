@@ -1,4 +1,3 @@
-// CategoriaRecurso.java
 package com.gestaoabrigos.model;
 
 public enum CategoriaRecurso {

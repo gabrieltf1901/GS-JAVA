@@ -9,7 +9,6 @@ public class PageController {
 
     @GetMapping("/login")
     public String showLoginForm(Model model) {
-        // parâmetros ?error e ?logout são tratados pelo Thymeleaf
         return "login";
     }
 
