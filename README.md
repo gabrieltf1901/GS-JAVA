@@ -99,7 +99,7 @@ tasks.named('test') {
 
 ## Modelagem de Dados
 
-Esquema Oracle (3FN): `ABRIGO`, `RECURSO`, `ESTOQUE_ABRIGO`.
+Esquema Oracle (3FN): `ABRIGO`, `RECURSO`, `USER`.
 
 ---
 
