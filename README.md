@@ -1,3 +1,8 @@
+# NOME: GABRIEL TORRES FERNANDES - RM553635
+## VIDEO PITCH --> https://youtu.be/c8zKYAyTgkI
+## VIDEO DEMONSTRAÇÃO --> https://youtu.be/p1viLC-j2kg
+
+
 # Gestão de Abrigos e Recursos
 
 **Descrição:**
