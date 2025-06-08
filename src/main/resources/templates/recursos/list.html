@@ -1,0 +1,38 @@
+<!-- templates/recursos/list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout}">
+<div th:fragment="content">
+  <div class="container mt-4">
+    <h1>Lista de Recursos</h1>
+    <!-- Botão para adicionar novo recurso -->
+    <div class="mb-3">
+      <a class="btn btn-primary" th:href="@{/recursos/add}">Adicionar Recurso</a>
+    </div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Categoria</th>
+        <th>Nível Crítico</th>
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="recurso : ${recursos}">
+        <td th:text="${recurso.nome}">Nome</td>
+        <td th:text="${recurso.categoria}">Categoria</td>
+        <td th:text="${recurso.nivelCritico}">Nível Crítico</td>
+        <td>
+          <a class="btn btn-sm btn-secondary me-1"
+             th:href="@{'/recursos/edit/' + ${recurso.id}}">Editar</a>
+          <form th:action="@{'/recursos/delete/' + ${recurso.id}}" method="post" style="display:inline;">
+            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este recurso?');">
+              Remover
+            </button>
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

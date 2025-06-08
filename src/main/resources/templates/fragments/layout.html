@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"/>
+  <title th:text="#{app.title}">Gestão de Abrigos</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" th:href="@{/}" th:text="#{app.title}">GestãoAbrigos</a>
+  </div>
+</nav>
+
+<div class="d-flex" style="padding-top:56px">
+  <div class="bg-light border-end vh-100 p-3" id="sidebar">
+    <div class="list-group">
+      <a th:href="@{/}" class="list-group-item list-group-item-action">
+        <i class="bi bi-house"></i> Home
+      </a>
+      <a th:href="@{/abrigos}"
+         class="list-group-item list-group-item-action">
+        <i class="bi bi-building"></i> Abrigos
+      </a>
+      <a th:href="@{/recursos}"
+         class="list-group-item list-group-item-action">
+        <i class="bi bi-box-seam"></i> Recursos
+      </a>
+      <form th:action="@{/logout}" method="post">
+        <button type="submit"
+                class="list-group-item list-group-item-action text-danger">
+          <i class="bi bi-box-arrow-right"></i> Sair
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- aqui entra o conteúdo da página -->
+  <div class="flex-grow-1 p-4"
+       th:insert="~{::content}"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

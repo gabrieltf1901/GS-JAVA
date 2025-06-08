@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout}">
+<div th:fragment="content">
+    <div class="container text-center">
+        <h1 th:text="#{greeting}">Bem-vindo à Gestão de Abrigos</h1>
+        <p class="lead" th:text="#{home.description}">
+            Use o menu à esquerda para navegar.
+        </p>
+    </div>
+</div>
+</html>

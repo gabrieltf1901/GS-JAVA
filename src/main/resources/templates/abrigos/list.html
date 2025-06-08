@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout}">
+<body>
+<div th:fragment="content" class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Lista de Abrigos</h1>
+        <!-- Botão para adicionar novo abrigo -->
+        <a th:href="@{/abrigos/add}" class="btn btn-success">
+            <i class="bi bi-plus-lg"></i> Adicionar Abrigo
+        </a>
+    </div>
+
+    <table class="table table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Status</th>
+            <th class="text-end">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="abrigo : ${abrigos}">
+            <td th:text="${abrigo.nome}">Nome</td>
+            <td th:text="${abrigo.endereco}">Endereço</td>
+            <td th:text="${abrigo.status}">Status</td>
+            <td class="text-end">
+                <!-- Link para editar -->
+                <a th:href="@{/abrigos/edit/{id}(id=${abrigo.id})}"
+                   class="btn btn-sm btn-primary me-1">
+                    <i class="bi bi-pencil-fill"></i>
+                </a>
+                <!-- Form para deletar -->
+                <form th:action="@{/abrigos/delete/{id}(id=${abrigo.id})}"
+                      method="post"
+                      th:object="${abrigo}"
+                      style="display:inline"
+                      onsubmit="return confirm('Tem certeza que deseja remover este abrigo?');">
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

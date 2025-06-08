@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="fragments/layout :: layout">
+<body>
+<div th:fragment="content" class="container mt-5">
+    <h2 th:text="${abrigo.id} != null ? 'Editar Abrigo' : 'Novo Abrigo'"></h2>
+    <form th:action="@{${abrigo.id} != null ? '/abrigos/edit/' + ${abrigo.id} : '/abrigos'}"
+          th:object="${abrigo}" method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" id="nome" th:field="*{nome}" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+            <label for="endereco" class="form-label">Endereço</label>
+            <input type="text" id="endereco" th:field="*{endereco}" class="form-control" required/>
+        </div>
+        <!-- outros campos... -->
+        <button type="submit" class="btn btn-primary w-100"
+                th:text="${abrigo.id} != null ? 'Atualizar' : 'Cadastrar'">
+            Cadastrar
+        </button>
+    </form>
+</div>
+</body>
+</html>
