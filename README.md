@@ -2,6 +2,8 @@
 ## VIDEO PITCH --> https://youtu.be/c8zKYAyTgkI
 ## VIDEO DEMONSTRAÇÃO --> https://youtu.be/p1viLC-j2kg
 
+### LINK DO DEPLOY NA AZURE --> http://webapp-java-58.azurewebsites.net/
+
 
 # Gestão de Abrigos e Recursos
 
